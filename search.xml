@@ -54,53 +54,9 @@
     
     
     <entry>
-      <title>友人帐</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>留言板</title>
       <link href="/messageboard/index.html"/>
       <url>/messageboard/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="title：电影data：2023-6-7-21：50"><a href="#title：电影data：2023-6-7-21：50" class="headerlink" title="title：电影data：2023-6-7 21：50"></a>title：电影<br>data：2023-6-7 21：50</h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博库哇里歪</title>
-      <link href="/myself/index.html"/>
-      <url>/myself/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -120,9 +76,53 @@
     
     
     <entry>
+      <title>友人帐</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="title：电影data：2023-6-7-21：50"><a href="#title：电影data：2023-6-7-21：50" class="headerlink" title="title：电影data：2023-6-7 21：50"></a>title：电影<br>data：2023-6-7 21：50</h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博库哇里歪</title>
+      <link href="/myself/index.html"/>
+      <url>/myself/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>日志</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
