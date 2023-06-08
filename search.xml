@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>“matlab作业”</title>
+      <link href="/2023/06/08/%E2%80%9Cmatlab%E4%BD%9C%E4%B8%9A%E2%80%9D/"/>
+      <url>/2023/06/08/%E2%80%9Cmatlab%E4%BD%9C%E4%B8%9A%E2%80%9D/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> -技术 -编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>“人工智能作业”</title>
+      <link href="/2023/06/08/%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BD%9C%E4%B8%9A%E2%80%9D/"/>
+      <url>/2023/06/08/%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BD%9C%E4%B8%9A%E2%80%9D/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> -技术 -AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小蛋头的萨摩耶</title>
       <link href="/2023/06/05/%E6%97%BA%E4%BB%94%E5%B0%8F%E8%9B%8B%E5%A4%B4/"/>
       <url>/2023/06/05/%E6%97%BA%E4%BB%94%E5%B0%8F%E8%9B%8B%E5%A4%B4/</url>
@@ -54,6 +92,17 @@
     
     
     <entry>
+      <title>留言板</title>
+      <link href="/messageboard/index.html"/>
+      <url>/messageboard/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>友人帐</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
@@ -76,9 +125,20 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/messageboard/index.html"/>
-      <url>/messageboard/index.html</url>
+      <title>博库哇里歪</title>
+      <link href="/myself/index.html"/>
+      <url>/myself/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日志</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -98,31 +158,9 @@
     
     
     <entry>
-      <title>博库哇里歪</title>
-      <link href="/myself/index.html"/>
-      <url>/myself/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>标签</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>日志</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
