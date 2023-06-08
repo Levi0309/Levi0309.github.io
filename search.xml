@@ -4,26 +4,25 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2023/06/07/%E7%AC%AC%E4%B8%80%E4%B8%AATypora/"/>
-      <url>/2023/06/07/%E7%AC%AC%E4%B8%80%E4%B8%AATypora/</url>
-      
-        <content type="html"><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>旺仔小蛋头的蛋仔之旅</title>
+      <title>小蛋头的萨摩耶</title>
       <link href="/2023/06/05/%E6%97%BA%E4%BB%94%E5%B0%8F%E8%9B%8B%E5%A4%B4/"/>
       <url>/2023/06/05/%E6%97%BA%E4%BB%94%E5%B0%8F%E8%9B%8B%E5%A4%B4/</url>
       
         <content type="html"><![CDATA[<p>啊咯哈，博库哇里维<br>旺仔小蛋头<mark class="hl-label red">是</mark> <mark class="hl-label pink">小胖纸</mark> </p>]]></content>
       
       
+      <categories>
+          
+          <category> happy </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -遇见 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -33,22 +32,33 @@
     
     
     <entry>
-      <title></title>
+      <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<hr><h2 id="title：关于data：2023-6-7-21：50"><a href="#title：关于data：2023-6-7-21：50" class="headerlink" title="title：关于data：2023-6-7 21：50"></a>title：关于<br>data：2023-6-7 21：50</h2>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title></title>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友人帐</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<hr><h2 id="title：友人帐data：2023-6-7-21：50"><a href="#title：友人帐data：2023-6-7-21：50" class="headerlink" title="title：友人帐data：2023-6-7 21：50"></a>title：友人帐<br>data：2023-6-7 21：50</h2>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -66,11 +76,55 @@
     
     
     <entry>
+      <title>留言板</title>
+      <link href="/messageboard/index.html"/>
+      <url>/messageboard/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博库哇里歪</title>
+      <link href="/myself/index.html"/>
+      <url>/myself/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<hr><p>tiele：音乐<br>data：2023-6-7 21：44<br>​—</p>]]></content>
+        <content type="html"><![CDATA[<hr><p>tiele：音乐<br>data：2023-6-7 19:25:51<br>​—</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日志</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
