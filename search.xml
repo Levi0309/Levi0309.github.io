@@ -8,7 +8,7 @@
       <link href="/2023/06/20/unity%E5%AE%9E%E7%8E%B0%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C/"/>
       <url>/2023/06/20/unity%E5%AE%9E%E7%8E%B0%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C/</url>
       
-        <content type="html"><![CDATA[<h1 id="unity实现视差效果"><a href="#unity实现视差效果" class="headerlink" title="unity实现视差效果"></a>unity实现视差效果</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Camera cam;</span><br><span class="line">   <span class="keyword">public</span> Transform followTarget;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> Vector2 startingPosition;<span class="comment">//背景起始位置</span></span><br><span class="line">   <span class="keyword">private</span> <span class="built_in">float</span> startingZ;<span class="comment">//背景起始位置z坐标</span></span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">   Vector2 camMoveSinceStart=&gt; (Vector2)cam.transform.position-startingPosition;<span class="comment">//相机自启动以来的移动量</span></span><br><span class="line">   <span class="built_in">float</span> zDistanceFromTarget =&gt; transform.position.z - followTarget.position.z;<span class="comment">//z坐标的差值 -0.4 -0.7 -1 天空 雪山 草地</span></span><br><span class="line">   <span class="built_in">float</span> clippingplane =&gt; (cam.transform.position.z + (zDistanceFromTarget &gt; <span class="number">0</span> ? cam.farClipPlane : cam.nearClipPlane));<span class="comment">//-10+0.3 由相机z值和z坐标插值来视差因子的分母</span></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   <span class="built_in">float</span> parallaxFactor =&gt; Mathf.Abs(zDistanceFromTarget)/ clippingplane;<span class="comment">//0.4/-9.7 更大=-0.04  0.7/-9.7=-0.07 10*0.04  10*0.07</span></span><br><span class="line">   <span class="comment">// Start is called before the first frame update</span></span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">   &#123;</span><br><span class="line">       startingPosition= transform.position;</span><br><span class="line">       startingZ= transform.position.z;</span><br><span class="line">      </span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Update is called once per frame</span></span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">   &#123;</span><br><span class="line"></span><br><span class="line">       Vector2 newPosition = startingPosition + camMoveSinceStart * parallaxFactor;<span class="comment">//乘一个更大的得到更大的数但是是复数 所以减的更小 所以移动慢</span></span><br><span class="line">       transform.position = <span class="keyword">new</span> Vector3(newPosition.x, newPosition.y,startingZ);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="unity实现视差效果"><a href="#unity实现视差效果" class="headerlink" title="unity实现视差效果"></a>unity实现视差效果</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Camera cam;</span><br><span class="line"><span class="keyword">public</span> Transform followTarget;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> Vector2 startingPosition;<span class="comment">//背景起始位置</span></span><br><span class="line"><span class="keyword">private</span> <span class="built_in">float</span> startingZ;<span class="comment">//背景起始位置z坐标</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Vector2 camMoveSinceStart=&gt; (Vector2)cam.transform.position-startingPosition;<span class="comment">//相机自启动以来的移动量</span></span><br><span class="line"><span class="built_in">float</span> zDistanceFromTarget =&gt; transform.position.z - followTarget.position.z;<span class="comment">//z坐标的差值 -0.4 -0.7 -1 天空 雪山 草地</span></span><br><span class="line"><span class="built_in">float</span> clippingplane =&gt; (cam.transform.position.z + (zDistanceFromTarget &gt; <span class="number">0</span> ? cam.farClipPlane : cam.nearClipPlane));<span class="comment">//-10+0.3 由相机z值和z坐标插值来视差因子的分母</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">float</span> parallaxFactor =&gt; Mathf.Abs(zDistanceFromTarget)/ clippingplane;<span class="comment">//0.4/-9.7 更大=-0.04  0.7/-9.7=-0.07 10*0.04  10*0.07</span></span><br><span class="line"><span class="comment">// Start is called before the first frame update</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    startingPosition= transform.position;</span><br><span class="line">    startingZ= transform.position.z;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Update is called once per frame</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    Vector2 newPosition = startingPosition + camMoveSinceStart * parallaxFactor;<span class="comment">//乘一个更大的得到更大的数但是是复数 所以减的更小 所以移动慢</span></span><br><span class="line">    transform.position = <span class="keyword">new</span> Vector3(newPosition.x, newPosition.y,startingZ);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -108,20 +108,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友人帐</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -141,22 +130,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>友人帐</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><h2 id="title：电影data：2023-6-7-21：50"><a href="#title：电影data：2023-6-7-21：50" class="headerlink" title="title：电影data：2023-6-7 21：50"></a>title：电影<br>data：2023-6-7 21：50</h2>]]></content>
       
     </entry>
     
@@ -174,9 +152,20 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="title：电影data：2023-6-7-21：50"><a href="#title：电影data：2023-6-7-21：50" class="headerlink" title="title：电影data：2023-6-7 21：50"></a>title：电影<br>data：2023-6-7 21：50</h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -188,6 +177,17 @@
       <title>博库哇里歪</title>
       <link href="/myself/index.html"/>
       <url>/myself/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
