@@ -4,17 +4,23 @@
   
     
     <entry>
-      <title>matlab作业</title>
-      <link href="/2023/06/08/%E2%80%9Cmatlab%E4%BD%9C%E4%B8%9A%E2%80%9D/"/>
-      <url>/2023/06/08/%E2%80%9Cmatlab%E4%BD%9C%E4%B8%9A%E2%80%9D/</url>
+      <title>unity实现视差效果</title>
+      <link href="/2023/06/20/unity%E5%AE%9E%E7%8E%B0%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C/"/>
+      <url>/2023/06/20/unity%E5%AE%9E%E7%8E%B0%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="unity实现视差效果"><a href="#unity实现视差效果" class="headerlink" title="unity实现视差效果"></a>unity实现视差效果</h1><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Camera cam;</span><br><span class="line">   <span class="keyword">public</span> Transform followTarget;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> Vector2 startingPosition;<span class="comment">//背景起始位置</span></span><br><span class="line">   <span class="keyword">private</span> <span class="built_in">float</span> startingZ;<span class="comment">//背景起始位置z坐标</span></span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">   Vector2 camMoveSinceStart=&gt; (Vector2)cam.transform.position-startingPosition;<span class="comment">//相机自启动以来的移动量</span></span><br><span class="line">   <span class="built_in">float</span> zDistanceFromTarget =&gt; transform.position.z - followTarget.position.z;<span class="comment">//z坐标的差值 -0.4 -0.7 -1 天空 雪山 草地</span></span><br><span class="line">   <span class="built_in">float</span> clippingplane =&gt; (cam.transform.position.z + (zDistanceFromTarget &gt; <span class="number">0</span> ? cam.farClipPlane : cam.nearClipPlane));<span class="comment">//-10+0.3 由相机z值和z坐标插值来视差因子的分母</span></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">   <span class="built_in">float</span> parallaxFactor =&gt; Mathf.Abs(zDistanceFromTarget)/ clippingplane;<span class="comment">//0.4/-9.7 更大=-0.04  0.7/-9.7=-0.07 10*0.04  10*0.07</span></span><br><span class="line">   <span class="comment">// Start is called before the first frame update</span></span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">   &#123;</span><br><span class="line">       startingPosition= transform.position;</span><br><span class="line">       startingZ= transform.position.z;</span><br><span class="line">      </span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">// Update is called once per frame</span></span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">   &#123;</span><br><span class="line"></span><br><span class="line">       Vector2 newPosition = startingPosition + camMoveSinceStart * parallaxFactor;<span class="comment">//乘一个更大的得到更大的数但是是复数 所以减的更小 所以移动慢</span></span><br><span class="line">       transform.position = <span class="keyword">new</span> Vector3(newPosition.x, newPosition.y,startingZ);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
       
+      
+      <categories>
+          
+          <category> unity </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> -技术 -编程 </tag>
+            <tag> -技术 </tag>
             
         </tags>
       
@@ -23,19 +29,26 @@
     
     
     <entry>
-      <title>人工智能作业</title>
-      <link href="/2023/06/08/%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BD%9C%E4%B8%9A%E2%80%9D/"/>
-      <url>/2023/06/08/%E2%80%9C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BD%9C%E4%B8%9A%E2%80%9D/</url>
+      <title></title>
+      <link href="/2023/06/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2023/06/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>你好</title>
+      <link href="/2023/06/10/%E4%BD%A0%E5%A5%BD/"/>
+      <url>/2023/06/10/%E4%BD%A0%E5%A5%BD/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
-      
-        <tags>
-            
-            <tag> -技术 -AI </tag>
-            
-        </tags>
       
     </entry>
     
@@ -117,6 +130,17 @@
     
     
     <entry>
+      <title>留言板</title>
+      <link href="/messageboard/index.html"/>
+      <url>/messageboard/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -139,22 +163,11 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/messageboard/index.html"/>
-      <url>/messageboard/index.html</url>
+      <title></title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博库哇里歪</title>
-      <link href="/myself/index.html"/>
-      <url>/myself/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<hr><p>tiele：音乐<br>data：2023-6-7 19:25:51<br>​—</p>]]></content>
       
     </entry>
     
@@ -172,11 +185,11 @@
     
     
     <entry>
-      <title></title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>博库哇里歪</title>
+      <link href="/myself/index.html"/>
+      <url>/myself/index.html</url>
       
-        <content type="html"><![CDATA[<hr><p>tiele：音乐<br>data：2023-6-7 19:25:51<br>​—</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
